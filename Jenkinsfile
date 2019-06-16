@@ -25,8 +25,8 @@ pipeline {
    stage('Archive') {
          steps {
              dir('target') {
-               zip zipFile: 'snapshot-beer.zip', archive: false, glob: '**/*.jar'
-                archiveArtifacts artifacts: 'snapshot-beer.zip', fingerprint: true
+               zip zipFile: 'snapshot-beer-"${env.BUILD_NUMBER}".zip', archive: false, glob: '**/*.jar'
+                archiveArtifacts artifacts: 'snapshot-beer-"${env.BUILD_NUMBER}".zip', fingerprint: true
              }
       } 
       
