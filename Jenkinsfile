@@ -16,7 +16,7 @@ pipeline {
 
        stage('Build') {
            steps {
-            dir ('maven-simple') {
+             {
                  
                 sh 'mvn clean install'
             }   
@@ -25,7 +25,7 @@ pipeline {
    }
    stage('Archive') {
          steps {
-           dir ('maven-simple/target') {
+            {
            archive '*.jar'
          }  
       } 
