@@ -15,19 +15,17 @@ pipeline {
         }
 
        stage('Build') {
-           steps {
-             {
-                 
+           steps {    
                 sh 'mvn clean install'
-            }   
+             
         } 
        
    }
    stage('Archive') {
          steps {
-            {
+            
            archive '*.jar'
-         }  
+        
       } 
       
    }  
