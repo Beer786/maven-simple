@@ -23,9 +23,9 @@ pipeline {
    }
    stage('Archive') {
          steps {
-            
+             dir('maven-pipeline/target') {
            archive '*.jar'
-        
+             }
       } 
       
    }  
