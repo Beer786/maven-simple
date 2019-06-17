@@ -7,15 +7,20 @@
 
     <formats>
         <format>zip</format>
-    </formats>
+    </formats>      
     <fileSets>
         <fileSet>
             <directory>${project.basedir}/target</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                    <include>*.jar</include>
+           </includes>
         </fileSet>
     </fileSets>
+    
     <files>
         <file>
-            <source>${project.build.directory}/*.jar</source>
+            <source>${project.build.directory}/${project.artifactId}-${project.version}.jar</source>
             <outputDirectory>/</outputDirectory>
             <destName>${env.BUILD_NAME}-${env.BUILD_NUMBER}.zip</destName>
         </file>
