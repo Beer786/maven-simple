@@ -15,7 +15,7 @@
     </fileSets>
     <files>
         <file>
-            <source> **/*ar</source>
+            <source>${project.build.directory}/*.jar</source>
             <outputDirectory>/</outputDirectory>
         </file>
     </files>
