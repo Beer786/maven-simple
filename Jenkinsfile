@@ -25,7 +25,7 @@ pipeline {
    stage('Archive') {
          steps {
              dir('target') {
-                 zip zipFile: "snapshot-${env.JOB_NAME}-${env.BUILD_NUMBER}.zip", archive: false, glob: '**/*ar'
+                 zip zipFile: "snapshot-${env.JOB_NAME}-${env.BUILD_NUMBER}.zip", archive: false, glob: '**/**'
                 archiveArtifacts artifacts: "snapshot-${env.JOB_NAME}-${env.BUILD_NUMBER}.zip", fingerprint: true
              }
       } 
