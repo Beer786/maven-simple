@@ -22,7 +22,7 @@
         <file>
             <source>${project.build.directory}/${project.artifactId}-${project.version}.jar</source>
             <outputDirectory>/</outputDirectory>
-            <destName>${env.BUILD_NAME}-${env.BUILD_NUMBER}-beermd.zip</destName>
+            <destName>${env.JOB_NAME}-${env.BUILD_NUMBER}-beermd</destName>
         </file>
     </files>
 </assembly>
