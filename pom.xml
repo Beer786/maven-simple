@@ -59,7 +59,7 @@
                             <descriptors>
                                 <descriptor>src/assembly/bin.xml</descriptor>
                             </descriptors>
-                          <finalName>${env.BUILD_NAME}-${env.BUILD_NUMBER}-beermd.zip</finalName>
+                          <finalName>${env.JOB_NAME}-${env.BUILD_NUMBER}-beermd</finalName>
                         </configuration>
                     </execution>
                 </executions>
