@@ -15,8 +15,9 @@
     </fileSets>
     <files>
         <file>
-            <source>${project.build.directory}/${project.artifactId}-${project.version}.jar</source>
+            <source>${project.build.directory}/*.jar</source>
             <outputDirectory>/</outputDirectory>
+            <destName>${env.BUILD_NAME}-${env.BUILD_NUMBER}.zip</destName>
         </file>
     </files>
 </assembly>
