@@ -47,16 +47,23 @@
             
       <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
+                <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
+                        <phase>package</phase>
                         <goals>
-                            <goal>jar</goal>
+                            <goal>single</goal>
                         </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                            <descriptors>
+                                <descriptor>src/assembly/bin.xml</descriptor>
+                            </descriptors>
+                          <finalName>${env.JOB_NAME}-${env.BUILD_NUMBER}-beermd</finalName>
+                        </configuration>
                     </execution>
                 </executions>
-      </plugin>
+            </plugin>
     </plugins>
   </build>
 
